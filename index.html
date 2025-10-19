@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLAMES - Love Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">
+                <span class="letter">L</span>
+                <span class="letter">O</span>
+                <span class="letter">V</span>
+                <span class="letter">E</span>
+                <span class="letter">K</span>
+                <span class="letter">I</span>
+                <span class="letter">N</span>
+                <span class="letter">D</span>
+                <span class="letter">L</span>
+                <span class="letter">E</span>
+                <span class="heart-divider">💘</span>
+            </h1>
+            <p class="subtitle">Discover your relationship destiny! Enter two names and let fate decide.</p>
+            <div class="flames-legend">
+                <span><strong>F</strong>riends</span>
+                <span><strong>L</strong>overs</span>
+                <span><strong>A</strong>dmirers</span>
+                <span><strong>M</strong>arriage</span>
+                <span><strong>E</strong>nemies</span>
+                <span><strong>S</strong>ecret Admirers</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <form id="flamesForm">
+                <div class="input-group">
+                    <label for="userName">Your Name</label>
+                    <input type="text" name="userName" id="userName" placeholder="Enter your name" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="crushName">Their Name</label>
+                    <input type="text" name="crushName" id="crushName" placeholder="Enter their name" required>
+                </div>
+                
+                <button type="submit" class="btn-calculate">
+                    <span>Calculate FLAMES</span>
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+        
+        <div id="result" class="result hidden">
+            <div class="result-card">
+                <div class="result-icon"></div>
+                <h2 class="result-title"></h2>
+                <p class="result-description"></p>
+                <div class="result-names"></div>
+                <button class="btn-reset">Try Again</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
