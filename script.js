@@ -36,17 +36,23 @@ function calculateFlames(name1, name2) {
     let user = name1.toLowerCase().replace(/\s+/g, '');
     let crush = name2.toLowerCase().replace(/\s+/g, '');
 
+    console.log("CRUSH: " + crush)
+    console.log("USER: " + user)
+
     // Remove common characters
-    for (let char of user.toLowerCase().replace(/\s+/g, '')) {
+    for (let char of user) {
         if (crush.includes(char)) {
-            user = name1.replace(char, '');
-            crush = name2.replace(char, '');
+            user = user.replaceAll(char, '');
+            crush = crush.replaceAll(char, '');
         }
     }
-
+    console.log("processedUser: " + user)
+    console.log("processedCrush: " + crush)
     // Count remaining letters
     const count = user.length + crush.length;
 
+    console.log("processedUser LENGTH: " + user.length)
+    console.log("processedCrush LENGTH: " + crush.length)
     // Handle perfect match (count = 0)
     if (count === 0) {
         return {
@@ -58,6 +64,8 @@ function calculateFlames(name1, name2) {
     // Calculate FLAMES result
     const FLAMES = ["F", "L", "A", "M", "E", "S"];
     const index = (count - 1) % FLAMES.length;
+    console.log(FLAMES.length)
+    console.log(index);
 
     return {
         result: FLAMES[index],
