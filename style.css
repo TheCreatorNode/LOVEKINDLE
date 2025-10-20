@@ -28,7 +28,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Container */
 .container {
     max-width: 600px;
     width: 100%;
@@ -36,7 +35,6 @@ body {
     z-index: 1;
 }
 
-/* Header */
 .header {
     text-align: center;
     margin-bottom: 2rem;
@@ -100,22 +98,20 @@ body {
     color: var(--secondary);
 }
 
-/* Card */
+
 .card {
     background: var(--card-bg);
     border-radius: 30px;
     padding: 3rem;
     box-shadow: 0 20px 60px var(--shadow);
-    backdrop-filter: blur(10px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+   
 }
 
 .card:hover {
-    transform: translateY(-5px);
     box-shadow: 0 25px 70px var(--shadow);
 }
 
-/* Form */
+
 .input-group {
     margin-bottom: 1.5rem;
 }
@@ -151,7 +147,7 @@ body {
     color: rgba(44, 62, 80, 0.4);
 }
 
-/* Button */
+
 .btn-calculate {
     width: 100%;
     padding: 1.2rem;
@@ -171,26 +167,9 @@ body {
     box-shadow: 0 10px 30px rgba(255, 107, 157, 0.4);
 }
 
-.btn-calculate:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(255, 107, 157, 0.5);
-}
 
-.btn-calculate:active {
-    transform: translateY(-1px);
-}
 
-.btn-calculate .icon {
-    width: 20px;
-    height: 20px;
-    transition: transform 0.3s ease;
-}
 
-.btn-calculate:hover .icon {
-    transform: translateX(5px);
-}
-
-/* Result */
 .result {
     margin-top: 2rem;
     opacity: 1;
@@ -287,7 +266,7 @@ body {
     transform: translateY(-1px);
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .title {
         font-size: 3rem;
